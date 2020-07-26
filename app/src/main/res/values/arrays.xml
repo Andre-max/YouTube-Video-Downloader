@@ -1,19 +1,12 @@
 <resources>
     <!-- Reply Preference -->
     <string-array name="reply_entries">
-        <item>144p</item>
-        <item>240p</item>
-        <item>360p</item>
-        <item>480p</item>
-        <item>720p</item>
-        <item>1080p</item>
+        <item>Audio</item>
+        <item>Video</item>
     </string-array>
 
     <string-array name="reply_values">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>7</item>
+        <item>140</item>
+        <item>22</item>
     </string-array>
 </resources>

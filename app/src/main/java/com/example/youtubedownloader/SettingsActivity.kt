@@ -23,15 +23,19 @@ class SettingsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.settings_activity)
 
-        val formatArray = mutableListOf("144p", "240p", "360p", "480p", "720p", "1080p")
+//        val formatArray = mutableListOf("Audio", "144p", "240p", "360p", "480p", "720p", "1080p")
+        val formatArray = mutableListOf("Audio", "Video")
         val preference = MyPreference(applicationContext)
         val spinner = binding.videoQualitySpinner
         val bottomNavigationView = binding.bottomNavView
         var chosenFormat = preference.getStringFormatPref()
+        val saveBtn = binding.saveBtn
+        val cancelBtn = binding.cancelBtn
+        var itemPosition: Int? = null
 
         fun resetList(){
             formatArray.clear()
-            formatArray.addAll(listOf("144p", "240p", "360p", "480p", "720p", "1080p"))
+            formatArray.addAll(listOf("Audio", "144p", "240p", "360p", "480p", "720p", "1080p"))
         }
 
         fun changeTopItem() {
@@ -46,8 +50,7 @@ class SettingsActivity : AppCompatActivity() {
             formatArray.add(0, currentChar)
         }
 
-        resetList()
-        changeTopItem()
+//        changeTopItem()
 
         spinner.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, formatArray)
 
@@ -62,15 +65,33 @@ class SettingsActivity : AppCompatActivity() {
                 position: Int,
                 id: Long
             ) {
-                val tag = itagList[position]
-                preference.setPreference(tag)
+                itemPosition = position
 
-                resetList()
-                preference.setStringFormatPref(formatArray[position])
-                chosenFormat = preference.getStringFormatPref()
+                saveBtn.visibility = View.VISIBLE
+                cancelBtn.visibility = View.VISIBLE
 
-                changeTopItem()
+//                changeTopItem()
             }
+        }
+
+        fun saveItem(position: Int){
+            val tag = itagList[position]
+            preference.setPreference(tag)
+
+            preference.setStringFormatPref(formatArray[position])
+            chosenFormat = preference.getStringFormatPref()
+        }
+
+        saveBtn.setOnClickListener {
+            saveItem(itemPosition!!)
+
+            saveBtn.visibility = View.GONE
+            cancelBtn.visibility = View.GONE
+        }
+
+        cancelBtn.setOnClickListener {
+            saveBtn.visibility = View.GONE
+            cancelBtn.visibility = View.GONE
         }
 
         bottomNavigationView.setOnNavigationItemSelectedListener { item: MenuItem ->
