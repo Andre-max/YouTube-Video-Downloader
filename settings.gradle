@@ -1,2 +1,3 @@
+include ':youtube-extractor'
 include ':app'
 rootProject.name = "YouTube Downloader"

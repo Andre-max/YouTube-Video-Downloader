@@ -8,7 +8,6 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:theme="@style/DarkMode"
         android:layout_height="match_parent"
         android:layout_width="match_parent">
 
@@ -71,15 +70,5 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.45" />
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/main_bottom_nav_view"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:itemIconTint="@android:color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:menu="@menu/bottom_menu"
-            tools:menu="@menu/bottom_menu" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

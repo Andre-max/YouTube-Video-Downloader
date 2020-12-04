@@ -1,5 +1,9 @@
 package com.example.youtubedownloader
 
+
+fun String.getVideoId() = split("=").last()
+
+
 var userItag: Int? = null
 
 const val PREFERENCE_NAME = "VIDEO_QUALITY"

@@ -1,0 +1,20 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.github.kotvertolet.youtubejextractor"
+4    android:versionCode="5"
+5    android:versionName="0.3.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="19"
+8-->D:\Code_Files\YouTube-Video-Downloader\youtube-extractor\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->D:\Code_Files\YouTube-Video-Downloader\youtube-extractor\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->D:\Code_Files\YouTube-Video-Downloader\youtube-extractor\src\main\AndroidManifest.xml:4:5-67
+11-->D:\Code_Files\YouTube-Video-Downloader\youtube-extractor\src\main\AndroidManifest.xml:4:22-64
+12
+13    <application />
+13-->D:\Code_Files\YouTube-Video-Downloader\youtube-extractor\src\main\AndroidManifest.xml:5:5-20
+14
+15</manifest>

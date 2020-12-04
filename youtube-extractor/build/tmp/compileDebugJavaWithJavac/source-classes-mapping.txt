@@ -1,0 +1,2 @@
+com/github/kotvertolet/youtubejextractor/BuildConfig.java
+ com.github.kotvertolet.youtubejextractor.BuildConfig
